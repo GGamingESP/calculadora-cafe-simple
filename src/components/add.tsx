@@ -8,7 +8,7 @@ const Add: React.FC<any> = () => {
     const allUsers = useAppSelector((state) => state.users)
     const dispatch = useAppDispatch()
 
-    const createUser = (e: Event) => {
+    const createUser = (e: any) => {
         e.preventDefault();
         dispatch(addUser(addUserName))
         setAddUserName("")
