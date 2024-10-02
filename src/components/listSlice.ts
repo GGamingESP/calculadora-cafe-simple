@@ -17,7 +17,7 @@ export const listSlice = createSlice({
             state.push(action.payload)
         },
         deletefromList: (state, action: PayloadAction<{username: string, date: string}>) => {
-            const index = state.findIndex(user => user.username === action.payload)
+            const index = state.findIndex(user => user.username === action.payload.username)
             if (index !== -1) {
                 state.splice(index, 1)
             }
