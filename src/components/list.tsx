@@ -22,12 +22,12 @@ const List: React.FC<any> = () => {
         end: ""
     })
 
-    const handleDateChange = (event: Event) => {
+    const handleDateChange = (event: any) => {
         console.log(event.target?.value);
         setDateInput({...dateInput, end: event.target?.value})
     }
 
-    function usableDays(rango: object) {
+    function usableDays(rango: any) {
         const { start, end } = rango;
         const fechaInicio = new Date(start);
         const fechaFin = new Date(end);
@@ -55,7 +55,7 @@ const List: React.FC<any> = () => {
         }
     }
 
-    const handleDateSubmit = (e: Event) => {
+    const handleDateSubmit = (e: any) => {
         e.preventDefault();
         calculateList()
     }
